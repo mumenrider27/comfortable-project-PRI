@@ -13,6 +13,7 @@ const setupPrice = (store) => {
   priceInput.max = maxPrice;
   priceInput.min = 0;
   priceValue.textContent = `Value : $${maxPrice}`;
+
   priceInput.addEventListener("input", function () {
     const value = parseInt(priceInput.value);
     priceValue.textContent = `Value : $${value}`;
@@ -20,7 +21,7 @@ const setupPrice = (store) => {
     display(newStore, getElement(".products-container"));
     if (newStore.length < 1) {
       const products = getElement(".products-container");
-      products.innerHTML = `<h3 class="filter-error">sorry no products matched your search</h3>`;
+      products.innerHTML = `<h3 class="filter-error">sorry, no products matched your search</h3>`;
     }
   });
 };

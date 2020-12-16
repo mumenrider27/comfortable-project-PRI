@@ -6,7 +6,7 @@ const setupCompanies = (store) => {
   const companiesDOM = getElement(".companies");
   companiesDOM.innerHTML = companies
     .map((company) => {
-      return `<button class="company-btn">${company}</button>`;
+      return ` <button class="company-btn">${company}</button>`;
     })
     .join("");
   companiesDOM.addEventListener("click", function (e) {
